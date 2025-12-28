@@ -8,4 +8,5 @@ actix-web = "4.12.1"
 deadpool-postgres = "0.14.1"
 serde = "1.0.228"
 tokio = "1.48.0"
-tokio-postgres = "0.7.15"
+chrono = { version = "0.4.38", features = ["serde"] }
+tokio-postgres = { version = "0.7.15", features = ["with-chrono-0_4"] }

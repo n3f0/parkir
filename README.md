@@ -150,6 +150,54 @@ Mengambil daftar semua lokasi parkir.
 }
 ```
 
+### 6. Transaksi Data
+Endpoint untuk mengelola data transaksi.
+
+#### Get Transaksi
+- **URL**: `/transaksi`
+- **Method**: `GET`
+- **Response**: JSON `ResponseData` (List Transaksi)
+
+#### Buat Transaksi
+- **URL**: `/transaksi/buat`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "start": "2023-10-27T10:00:00",
+  "end": "2023-10-27T11:00:00",
+  "id_user": 1,
+  "id_jukir": 2,
+  "amount": 5000.0,
+  "id_parkir": 1
+}
+```
+- **Response**: JSON `ResponseEmpty`
+
+#### Ubah Transaksi
+- **URL**: `/transaksi/ubah`
+- **Method**: `POST`
+- **Body**: JSON (sama dengan buat, tambah field `id`)
+```json
+{
+  "id": 101,
+  "start": "2023-10-27T10:00:00",
+  ...
+}
+```
+- **Response**: JSON `ResponseEmpty`
+
+#### Hapus Transaksi
+- **URL**: `/transaksi/hapus`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "id": 101
+}
+```
+- **Response**: JSON `ResponseEmpty`
+
 ## Struktur Project
 
 ```

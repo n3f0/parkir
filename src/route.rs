@@ -5,5 +5,9 @@ pub fn route(cfg: &mut web::ServiceConfig) {
         .service(controllers::landing::about)
         .service(controllers::tarif::index)
         .service(controllers::jukir::index)
-        .service(controllers::parkir::index);
+        .service(controllers::parkir::index)
+        .service(controllers::transaksi::index)
+        .service(controllers::transaksi::create)
+        .service(controllers::transaksi::change)
+        .service(controllers::transaksi::remove);
 }
