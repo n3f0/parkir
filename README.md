@@ -148,7 +148,48 @@ Mengambil daftar semua lokasi parkir.
     ...
   ]
 }
+    ...
+  ]
+}
+
+#### Buat Parkir
+- **URL**: `/parkir/buat`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "lokasi": "Pasar Baru",
+  "lat": -6.1234,
+  "lon": 106.1234
+}
 ```
+- **Response**: JSON `ResponseEmpty`
+- **Catatan**: `unique_key` akan di-generate otomatis oleh server.
+
+#### Ubah Parkir
+- **URL**: `/parkir/ubah`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "id_parkir": 1,
+  "lokasi": "Pasar Baru Update",
+  "lat": -6.1234,
+  "lon": 106.1234
+}
+```
+- **Response**: JSON `ResponseEmpty`
+
+#### Hapus Parkir
+- **URL**: `/parkir/hapus`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "id_parkir": 1
+}
+```
+- **Response**: JSON `ResponseEmpty`
 
 ### 6. Transaksi Data
 Endpoint untuk mengelola data transaksi.

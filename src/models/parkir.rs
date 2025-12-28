@@ -7,7 +7,7 @@ pub struct Parkir {
     pub lokasi: String,
     pub lat: f32,
     pub lon: f32,
-    unique_key: String,
+    pub unique_key: String,
 }
 
 impl From<Row> for Parkir {
@@ -20,4 +20,24 @@ impl From<Row> for Parkir {
             unique_key: row.get("unique_key"),
         }
     }
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct CreateParkir {
+    pub lokasi: String,
+    pub lat: f32,
+    pub lon: f32,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct UpdateParkir {
+    pub id_parkir: i32,
+    pub lokasi: String,
+    pub lat: f32,
+    pub lon: f32,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct DeleteParkir {
+    pub id_parkir: i32,
 }
