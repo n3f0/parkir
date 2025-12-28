@@ -1,0 +1,11 @@
+[package]
+name = "parkir"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.12.1"
+deadpool-postgres = "0.14.1"
+serde = "1.0.228"
+tokio = "1.48.0"
+tokio-postgres = "0.7.15"
