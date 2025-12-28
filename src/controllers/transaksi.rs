@@ -1,4 +1,4 @@
-use actix_web::{get, post, web, HttpResponse};
+use actix_web::{HttpResponse, get, post, web};
 use deadpool_postgres::Pool;
 
 use crate::{
@@ -12,7 +12,7 @@ pub async fn index(pool: web::Data<Pool>) -> HttpResponse {
 
     let rows = client
         .query(
-            "select id, start, \"end\", id_user, id_jukir, amount, id_parkir from d_transaksi order by id desc",
+            "select id, start::timestamp, \"end\"::timestamp, id_user, id_jukir, amount, id_parkir from d_transaksi order by id desc",
             &[],
         )
         .await
