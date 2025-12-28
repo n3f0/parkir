@@ -6,7 +6,7 @@ use tokio_postgres::Row;
 pub struct Transaksi {
     pub id: i32,
     pub start: NaiveDateTime,
-    pub end: NaiveDateTime,
+    pub end: Option<NaiveDateTime>,
     pub id_user: i32,
     pub id_jukir: i32,
     pub amount: f64,
@@ -30,7 +30,7 @@ impl From<Row> for Transaksi {
 #[derive(Serialize, Deserialize)]
 pub struct CreateTransaksi {
     pub start: NaiveDateTime,
-    pub end: NaiveDateTime,
+    pub end: Option<NaiveDateTime>,
     pub id_user: i32,
     pub id_jukir: i32,
     pub amount: f64,
@@ -41,7 +41,7 @@ pub struct CreateTransaksi {
 pub struct UpdateTransaksi {
     pub id: i32,
     pub start: NaiveDateTime,
-    pub end: NaiveDateTime,
+    pub end: Option<NaiveDateTime>,
     pub id_user: i32,
     pub id_jukir: i32,
     pub amount: f64,

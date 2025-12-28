@@ -165,7 +165,7 @@ Endpoint untuk mengelola data transaksi.
 ```json
 {
   "start": "2023-10-27T10:00:00",
-  "end": "2023-10-27T11:00:00",
+  "end": null,
   "id_user": 1,
   "id_jukir": 2,
   "amount": 5000.0,
