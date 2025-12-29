@@ -126,6 +126,47 @@ Mengambil daftar semua juru parkir.
 }
 ```
 
+#### Buat Jukir
+- **URL**: `/jukir/buat`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "nama": "Budi Baru",
+  "no_ktp": "12345678901",
+  "alamat": "Jl. Baru No. 1",
+  "no_hp": "081234567891"
+}
+```
+- **Response**: JSON `ResponseEmpty`
+- **Catatan**: `unique_key` akan di-generate otomatis oleh server.
+
+#### Ubah Jukir
+- **URL**: `/jukir/ubah`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "id": 101,
+  "nama": "Budi Update",
+  "no_ktp": "12345678901",
+  "alamat": "Jl. Baru Update No. 1",
+  "no_hp": "081234567891"
+}
+```
+- **Response**: JSON `ResponseEmpty`
+
+#### Hapus Jukir
+- **URL**: `/jukir/hapus`
+- **Method**: `POST`
+- **Body**: JSON
+```json
+{
+  "id": 101
+}
+```
+- **Response**: JSON `ResponseEmpty`
+
 ### 5. Get Lokasi Parkir
 Mengambil daftar semua lokasi parkir.
 

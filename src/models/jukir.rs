@@ -23,3 +23,25 @@ impl From<Row> for Jukir {
         }
     }
 }
+
+#[derive(Serialize, Deserialize)]
+pub struct CreateJukir {
+    pub nama: String,
+    pub no_ktp: String,
+    pub alamat: String,
+    pub no_hp: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct UpdateJukir {
+    pub id: i32,
+    pub nama: String,
+    pub no_ktp: String,
+    pub alamat: String,
+    pub no_hp: String,
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct DeleteJukir {
+    pub id: i32,
+}
